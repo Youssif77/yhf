@@ -9,12 +9,11 @@ function Toggle() {
   const themeCtx = useContext(ThemeContext);
 
   return (
-    <div className={classes.t}>
+    <div className={classes.t} onClick={themeCtx.toggleDarkMode}>
       <img src={Sun} alt="sun" className={classes["t-icon"]} />
       <img src={Moon} alt="moon" className={classes["t-icon"]} />
       <div
         className={classes["t-button"]}
-        onClick={themeCtx.toggleDarkMode}
         style={{ left: themeCtx.darkMode ? 25 : 0 }}
       ></div>
     </div>

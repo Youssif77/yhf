@@ -8,7 +8,7 @@ function Intro() {
     <div className={classes.i}>
       <div className={classes["i-left"]}>
         <div className={classes["i-left-wrapper"]}>
-          <h2 className={classes["i-intro"]}>Hallo, My name is</h2>
+          <h2 className={classes["i-intro"]}>Hello, My name is</h2>
           <h1 className={classes["i-name"]}>Youssif Hany Fouad</h1>
           <div className={classes["i-title"]}>
             <div className={classes["i-title-wrapper"]}>
