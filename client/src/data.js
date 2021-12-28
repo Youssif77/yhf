@@ -19,7 +19,7 @@ export const products = [
   {
     id: 3,
     img: Gpt3,
-    link: "https://gpt3-1k3k04a3m-youssif77.vercel.app/",
+    link: "https://gpt3-lovat.vercel.app/",
   },
   {
     id: 4,
