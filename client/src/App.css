@@ -1,3 +1,7 @@
+:root {
+  --main-color: #59b256;
+}
+
 .dark-mode {
   background-color: #222;
   color: white;

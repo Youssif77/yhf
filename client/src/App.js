@@ -16,7 +16,7 @@ function App() {
     <div className={themeCtx.darkMode ? "dark-mode" : "light-mode"}>
       <Toggle />
       <Intro />
-      <About />
+      {/* <About /> */}
       <ProductList />
       <Contact />
     </div>

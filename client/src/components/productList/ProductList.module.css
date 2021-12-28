@@ -1,10 +1,11 @@
-.p1 {
+.pl {
   padding: 50px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  /* width: 100%; */
 }
 
 .pl-texts {
@@ -12,7 +13,7 @@
 }
 
 .pl-title {
-  font-style: 50px;
+  font-size: 50px;
   font-weight: 600;
 }
 
@@ -25,4 +26,18 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 480px) {
+  .pl {
+    padding: 10px;
+  }
+
+  .pl-texts {
+    width: 100%;
+  }
+
+  .pl-desc {
+    display: none;
+  }
 }

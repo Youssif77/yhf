@@ -6,12 +6,12 @@
 .c-bg {
   width: 20px;
   height: 100%;
-  background-color: #59b256;
+  background-color: var(--main-color);
   position: absolute;
 }
 
 .c-wrapper {
-  padding: 50px;
+  padding: 50px 50px 0;
   display: flex;
 }
 
@@ -35,7 +35,7 @@
 .c-info-item {
   display: flex;
   align-items: center;
-  margin: 50px 0;
+  margin-top: 50px;
   font-weight: 300;
   width: 70%;
 }
@@ -44,6 +44,15 @@
   width: 30px;
   height: 30px;
   margin-right: 20px;
+}
+
+.c-info-item a,
+.c-info-item address {
+  color: var(--main-color);
+}
+
+.c-info-item a {
+  text-decoration: none;
 }
 
 .c-desc {
@@ -74,7 +83,7 @@
 .form button {
   border: none;
   padding: 15px;
-  background-color: #59b256;
+  background-color: var(--main-color);
   color: white;
   font-weight: 500;
   cursor: pointer;
@@ -83,5 +92,33 @@
 @media screen and (max-width: 480px) {
   .c-wrapper {
     flex-direction: column;
+    padding: 0 50px;
+  }
+
+  .c-title {
+    font-size: 30px;
+  }
+
+  .c-info-item {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .c-desc {
+    display: none;
+  }
+
+  .form {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form input {
+    width: 50%;
+    height: 40px;
   }
 }

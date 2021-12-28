@@ -1,6 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import emailjs from "emailjs-com";
 
+import { ThemeContext } from "./../../shared/theme-context";
 import Phone from "./../../img/phone.png";
 import Email from "./../../img/email.png";
 import Address from "./../../img/address.png";
@@ -8,10 +9,12 @@ import classes from "./Contact.module.css";
 
 function Contact() {
   const [done, setDone] = useState(false);
+  const themeCtx = useContext(ThemeContext);
   const formRef = useRef();
 
   function submitHandler(e) {
     e.preventDefault();
+    setDone(true);
     emailjs
       .sendForm(
         "service_li8mnz6",
@@ -20,10 +23,7 @@ function Contact() {
         "user_9fXuyR0TlpPPYMSzLTRjB"
       )
       .then(
-        (result) => {
-          console.log(result.text);
-          setDone(true);
-        },
+        (result) => {},
         (error) => {
           console.err(error.text);
         }
@@ -35,19 +35,22 @@ function Contact() {
       <div className={classes["c-bg"]}></div>
       <div className={classes["c-wrapper"]}>
         <div className={classes["c-left"]}>
-          <h1 className={classes["c-title"]}>let's discuss your project</h1>
+          <h1 className={classes["c-title"]}>let's discuss business NOW</h1>
           <address className={classes["c-info"]}>
             <div className={classes["c-info-item"]}>
               <img src={Phone} alt="phone" className={classes["c-icon"]} />
-              +20 1024134716
+              <a href="tel:+201024134716">+20 1024134716</a>
             </div>
             <div className={classes["c-info-item"]}>
               <img src={Email} alt="email" className={classes["c-icon"]} />
-              youssifhany75@gmail.com
+              <a href="mailto:youssifhany75@gmail.com">
+                youssifhany75@gmail.com
+              </a>
             </div>
             <div className={classes["c-info-item"]}>
               <img src={Address} alt="ddress" className={classes["c-icon"]} />
-              ALexandria,Egypt
+              <address>ALexandria, Egypt </address>
+              <b>🇪🇬</b>
             </div>
           </address>
         </div>
@@ -57,13 +60,33 @@ function Contact() {
             freelancing if the right project comes along. me.
           </p>
           <form className={classes.form} ref={formRef} onSubmit={submitHandler}>
-            <input type="text" placeholder="Name" name="user_name" />
-            <input type="text" placeholder="Subject" name="user_subject" />
-            <input type="email" placeholder="Email" name="user_email" />
-            <textarea rows="5" placeholder="Message" name="message" />
+            <input
+              className={themeCtx.darkMode && "dark-mode"}
+              type="text"
+              placeholder="Name"
+              name="user_name"
+            />
+            <input
+              className={themeCtx.darkMode && "dark-mode"}
+              type="text"
+              placeholder="Subject"
+              name="user_subject"
+            />
+            <input
+              className={themeCtx.darkMode && "dark-mode"}
+              type="email"
+              placeholder="Email"
+              name="user_email"
+            />
+            <textarea
+              className={themeCtx.darkMode && "dark-mode"}
+              rows="5"
+              placeholder="Message"
+              name="message"
+            />
             <button type="submit">Submit</button>
           </form>
-          {done && "Thank You..."}
+          {done && <p>Thank You...</p>}
         </div>
       </div>
     </div>

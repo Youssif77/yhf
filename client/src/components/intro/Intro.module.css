@@ -63,7 +63,7 @@
   height: 50px;
   font-size: 30px;
   font-weight: bold;
-  color: #59b256;
+  color: var(--main-color);
   display: flex;
   align-items: center;
 }
@@ -79,7 +79,7 @@
 .i-bg {
   clip-path: circle(40% at 50% 50%);
 
-  background-color: #59b256;
+  background-color: var(--main-color);
   width: 90%;
   height: 90%;
   display: flex;
@@ -91,14 +91,14 @@
 .i-bg:hover .i-img,
 .i-bg.hover .i-img {
   opacity: 1;
-  height: 95%;
-  transition: height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  transform: scale(1.1);
 }
 
 .i-img {
   height: 90%;
   object-fit: contain;
   opacity: 0.9;
+  transition: transform 0.6s ease-in-out, opacity 1s ease-in-out;
 }
 
 @media screen and (max-width: 480px) {
@@ -131,6 +131,6 @@
   }
 
   .i-img {
-    display: none;
+    width: 60%;
   }
 }

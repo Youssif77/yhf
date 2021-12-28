@@ -21,14 +21,35 @@
   height: 6px;
   border-radius: 50%;
   margin: 3px;
-  background-color: #fff;
+  background-color: red;
+}
+
+.p-circle:nth-child(2) {
+  background-color: yellow;
+}
+
+.p-circle:last-child {
+  background-color: green;
 }
 
 .p-img {
   width: 100%;
+}
+
+.p-img {
   transition: all 10s ease;
 }
 
 .p:hover .p-img {
   transform: translateY(-100%);
+}
+
+.p-details {
+}
+
+@media screen and (max-width: 480px) {
+  .p {
+    width: 40%;
+    height: 20vh;
+  }
 }

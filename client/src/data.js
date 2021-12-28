@@ -1,34 +1,39 @@
-import s1 from "./img/s1.png";
+import YourPlaces from "./img/your-places.png";
+import Forkify from "./img/forkify.png";
+import Gpt3 from "./img/gpt3.png";
+import FrontendBootcamp from "./img/frontend-bootcamp.png";
+import Colorlib from "./img/colorlib.png";
+import Tasuku from "./img/tasuku.png";
 
 export const products = [
   {
     id: 1,
-    img: s1,
-    link: "https://your-places-332222.web.app/",
+    img: Forkify,
+    link: "https://forkify-yhf.netlify.app/",
   },
   {
     id: 2,
-    img: s1,
-    link: "https://your-places-332222.web.app/",
+    img: Tasuku,
+    link: "https://tasuku.surge.sh/",
   },
   {
     id: 3,
-    img: s1,
-    link: "https://your-places-332222.web.app/",
+    img: Gpt3,
+    link: "https://gpt3-1k3k04a3m-youssif77.vercel.app/",
   },
   {
     id: 4,
-    img: s1,
-    link: "https://your-places-332222.web.app/",
+    img: FrontendBootcamp,
+    link: "https://frontend-bootcamp-yhf.netlify.app/",
   },
   {
     id: 5,
-    img: s1,
-    link: "https://your-places-332222.web.app/",
+    img: Colorlib,
+    link: "https://colorlib-yhf.netlify.app/",
   },
   {
     id: 6,
-    img: s1,
-    link: "https://your-places-332222.web.app/",
+    img: YourPlaces,
+    link: "https://yourPlaces-332222.web.app/",
   },
 ];
