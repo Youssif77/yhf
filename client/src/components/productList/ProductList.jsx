@@ -8,9 +8,9 @@ function ProductList() {
   return (
     <div className={classes.pl}>
       <div className={classes["pl-texts"]}>
-        <h1 className={classes["pl-title"]}>Create & inspire. It's YHF</h1>
+        <h1 className={classes["pl-title"]}>Create & inspire. It's YHFA</h1>
         <p className={classes["pl-desc"]}>
-          YHF is a creative portfolio that your work has been waiting for.
+          YHFA is a creative portfolio that your work has been waiting for.
           Beautiful homes, stunning portfolio styles & a whole lot more awaits
           inside.
         </p>
